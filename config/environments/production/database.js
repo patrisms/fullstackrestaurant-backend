@@ -1,6 +1,5 @@
-const parse = require('pg-connection-string').parse;
+/*const parse = require('pg-connection-string').parse;
 const config = parse(process.env.DATABASE_URL);
-
 
 module.exports = {
   defaultConnection: 'default',
@@ -48,3 +47,19 @@ module.exports = {
   }
 }
 */
+
+module.exports = ({ env }) => ({
+  defaultConnection: 'default',
+  connections: {
+    default: {
+      connector: 'mongoose',
+      settings: {
+        uri: env('DATABASE_URI'),
+      },
+      options: {
+        ssl: true,
+      },
+    },
+  },
+});
+ 

@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: 'strapi-hook-bookshelf',
       settings: {
         client: 'postgres',
         host: config.host,

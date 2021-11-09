@@ -1,5 +1,18 @@
+// module.exports = {
+//     graphql: {
+//         playgroundAlways: true
+//     }
+// }
+
 module.exports = {
+    //
     graphql: {
-        playgroundAlways: true
-    }
-}
+      endpoint: "/graphql",
+      shadowCRUD: true,
+      playgroundAlways: true,
+      depthLimit: 100,
+      apolloServer: {
+        tracing: false,
+      },
+    },
+  };

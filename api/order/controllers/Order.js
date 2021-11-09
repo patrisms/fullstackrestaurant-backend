@@ -35,7 +35,7 @@ module.exports = {
       charge_id: charge.id,
       amount: stripeAmount,
       address,
-      dishes,
+      dishes: JSON.stringify(dishes),
       city,
       state,
     });

@@ -11,9 +11,9 @@ module.exports = {
   upload: {
     provider: "cloudinary",
     providerOptions: {
-      cloud_name: "dnwdxavgx",
-      api_key: "476438797683372",
-      api_secret: "a1cbYAdvnu5Vn37M7hu9uManluU",
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
     },
   },
 };

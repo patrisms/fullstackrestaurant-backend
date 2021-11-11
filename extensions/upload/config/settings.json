@@ -1,7 +1,7 @@
 {
     "provider": "cloudinary",
     "providerOptions": {
-       "cloud name": "dnwdxavgx",
+       "cloud_name": "dnwdxavgx",
        "api_key": "476438797683372",
        "api_secret": "a1cbYAdvnu5Vn37M7hu9uManluU"
     }

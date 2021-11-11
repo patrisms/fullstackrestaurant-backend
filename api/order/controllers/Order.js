@@ -25,13 +25,13 @@ module.exports = {
       // Transform cents to dollars.
       amount: stripeAmount,
       currency: "usd",
-      description: `Order ${new Date()} by ${ctx.state.user._id}`,
+      description: `Order ${new Date()} by ${ctx.state.user.id}`,
       source: token,
     });
 
     // Register the order in the database
     const order = await strapi.services.order.create({
-      user: ctx.state.user.id,
+      user: ctx.state.user.email,
       charge_id: charge.id,
       amount: stripeAmount,
       address,
